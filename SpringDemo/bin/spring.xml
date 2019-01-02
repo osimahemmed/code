@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id = "a" class="com.osim.spring.scope.A" scope="singleton">
+		<property name="text" value="text A" />
+		<lookup-method name="getB" bean="b" />
+		<!-- <property name="b" >
+			<ref bean="b" />
+		</property> -->
+	</bean>
+	
+	<bean id="b" class="com.osim.spring.scope.B" scope="prototype">
+		<property name="text" value="text B" />
+	</bean>
+
+		<!-- <bean id="a" class="com.osim.spring.A">
+			<property name="b" ref ="b" />
+		</bean>
+		<bean id="b" class="com.osim.spring.B">
+			<property name="a" ref ="a" />
+			<property name="age" value ="12" />
+		</bean>
+		<bean id="singleton" class="com.osim.spring.Singleton" scope="prototype">
+			<property name ="name" value="osim" />
+			<property name ="age" value="34" />
+		</bean> -->
+
+	<!-- <bean id="triangle" class="com.osim.spring.Triangle">
+		<property name="pointA" ref="pointA" />
+		<property name="pointB" ref="pointB" />
+		<property name="pointC" ref="pointC" />
+	</bean>
+	
+	
+	
+	<bean id="pointA" class="com.osim.spring.Point">
+		<property name="x" value="0" />
+		<property name="y" value="0" />
+	</bean>
+	
+	<bean id="pointB" class="com.osim.spring.Point">
+		<property name="x" value="-20" />
+		<property name="y" value="0" />
+	</bean>
+	
+	<bean id="pointC" class="com.osim.spring.Point">
+		<property name="x" value="20" />
+		<property name="y" value="0" />
+	</bean> -->
+	
+	
+	
+</beans>
