@@ -11,6 +11,7 @@ import java.util.Map;
 public class AnagramsList {
 
 	public static void main(String[] args) {
+		List<String> list45 = new ArrayList<>();
 		
 		/*List<String> list = new ArrayList<>();//{“cat”, “dog”, “tac”, “god”, “act”}
 		list.add("cat");

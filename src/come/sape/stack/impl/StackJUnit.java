@@ -8,11 +8,11 @@ public class StackJUnit {
 
 	
 	
-	static Stack stack;
+	static StackUsingArray stack;
 	
 	@BeforeClass
 	public static void initialize() {
-		stack = new Stack(3);
+		stack = new StackUsingArray(3);
 	}
 	
 	@Test
@@ -43,7 +43,7 @@ public class StackJUnit {
 	
 	@Test(expected = java.lang.StackOverflowError.class)
 	public void testStackFull() {
-		Stack stack1 = new Stack(1);
+		StackUsingArray stack1 = new StackUsingArray(1);
 		stack1.push(1);
 		stack1.push(2);
 		stack.push(3);

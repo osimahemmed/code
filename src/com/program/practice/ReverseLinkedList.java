@@ -2,6 +2,15 @@ package com.program.practice;
 
 public class ReverseLinkedList {
 
+	/*static Node head;
+	static class Node {
+		int data;
+		Node next;
+		Node(int d) {
+			this.data = d;
+			next = null;
+		}
+	}*/
 	static Node head;
 	static class Node {
 		int data;
@@ -12,7 +21,7 @@ public class ReverseLinkedList {
 		}
 	}
 	
-	Node reverse(Node node) {
+	/*Node reverse(Node node) {
 		Node prev = null;
 		Node next = null;
 		Node current = node;
@@ -25,6 +34,22 @@ public class ReverseLinkedList {
 		}
 		node = prev;
 		
+		return node;
+	}*/
+	
+	Node reverse(Node node)  {
+		Node next = null;
+		Node prev = null;
+		
+		Node current = node;
+		
+		while(current != null) {
+			next = current.next;
+			current.next = prev;
+			prev = current;
+			current = next;
+		}
+		node = prev;
 		return node;
 	}
 	

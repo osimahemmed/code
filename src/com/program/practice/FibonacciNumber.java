@@ -5,7 +5,7 @@ public class FibonacciNumber {
 	public static void main(String[] args) {
 		int i = fibonacciUsingRecursion(10);
 		System.out.println(i);
-		fibonacciUsingIteration(10);
+		fibonacciUsingIteration(1);
 	}
 
 	private static int fibonacciUsingRecursion(int n) {
@@ -23,8 +23,9 @@ public class FibonacciNumber {
 			sum = a + b;
 			a = b;
 			b = sum;
-			System.out.println(sum + " ");
+			//System.out.println(sum + " ");
 		}
+		System.out.println(sum + " ");
 		return sum;
 	}
 

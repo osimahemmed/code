@@ -4,7 +4,11 @@ import java.io.Serializable;
 
 class B extends A implements Serializable
 {
-    int j;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 3971233093196422363L;
+	int j;
      
     // parameterized constructor
     public B(int i,int j) 

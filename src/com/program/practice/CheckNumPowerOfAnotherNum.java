@@ -3,6 +3,8 @@
 package com.program.practice;
 
 public class CheckNumPowerOfAnotherNum {
+	
+	private static final double CONS = 0.000001;
 
 	public static void main(String[] args) {
 		// Check if x is a power of y
@@ -11,7 +13,7 @@ public class CheckNumPowerOfAnotherNum {
 		System.out.println(+ x + " is power of " + y + ": " + isPower(x, y));
 	}
 
-	private static boolean isPower(double x, int y) {
+	private static boolean isPower(final double x, final int y) {
 		double n = y;
 		if (x == 1)
 			return true;
@@ -23,7 +25,8 @@ public class CheckNumPowerOfAnotherNum {
 			while (n < x)
 				n *= y;
 		}
-		return n == x;
+		//return n == x;
+		return Math.abs(n-x) < CONS;//
 	}
 
 }

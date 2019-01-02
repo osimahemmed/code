@@ -4,8 +4,8 @@ public class SecondSmallestFromUnsortedArr {
 
 	public static void main(String[] args) {
 		
-		//int[] arr = {34, 2, 12,1,99,0,45,20};
-		int[] arr = {Integer.MAX_VALUE,Integer.MAX_VALUE,Integer.MIN_VALUE};
+		int[] arr = {34, 2, 12, 1, 99, 0, 45, 20};
+		//int[] arr = {Integer.MAX_VALUE,Integer.MAX_VALUE,Integer.MIN_VALUE};
 		//int[] arr = {1,1};
 		int secondSmall = getSecondSmallest(arr);
 		System.out.println(secondSmall);

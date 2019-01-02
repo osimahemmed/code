@@ -42,6 +42,7 @@ public class MergeSort {
 		}
 
 		while (currentLow <= mid) {
+			
 			temp[current] = array[currentLow];
 			current++;
 			currentLow++;
